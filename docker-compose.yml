@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+    graphdb:
+        build:
+            context: ./graphdb
+        ports:
+            - 7200:7200
+        environment:
+            - GDB_HEAP_SIZE=2g
+            - GDB_MIN_MEM=1g
+            - GDB_MAX_MEM=2g      
+    dashboard:
+        image: registry.gitlab.com/um-cds/projects/faircomml/model-commissioning-station:feature_validation
+        ports:
+            - 8080:8080
+        volumes:
+            - ./dashboard.properties:/application.properties
+    
