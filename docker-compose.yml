@@ -10,7 +10,7 @@ services:
             - GDB_MIN_MEM=1g
             - GDB_MAX_MEM=2g      
     dashboard:
-        image: registry.gitlab.com/um-cds/projects/faircomml/model-commissioning-station:feature_validation
+        image: ghcr.io/maastrichtu-cds/model-browser:feature_validation
         ports:
             - 8080:8080
         volumes:
