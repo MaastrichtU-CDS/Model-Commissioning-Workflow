@@ -9,8 +9,8 @@ services:
             - GDB_HEAP_SIZE=2g
             - GDB_MIN_MEM=1g
             - GDB_MAX_MEM=2g      
-    dashboard:
-        image: registry.gitlab.com/um-cds/projects/faircomml/model-commissioning-station:feature_validation
+    browser:
+        image: ghcr.io/maastrichtu-cds/model-browser
         ports:
             - 8080:8080
         volumes:
@@ -23,3 +23,13 @@ services:
         volumes:
             - ./triplifier.properties:/triplifier.properties
             - ./triplifier_data:/data
+    commissioning_workbench:
+        image: ghcr.io/maastrichtu-cds/model-commissioning-library/frontend
+        ports:
+          - 5000:5000
+        volumes:
+          - ./config_commissioning.json:/app/config.json
+    commissioning_service:
+        image: ghcr.io/maastrichtu-cds/model-commissioning-library/serviceworker
+        volumes:
+          - ./config_commissioning.json:/app/config.json
