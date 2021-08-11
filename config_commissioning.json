@@ -1,0 +1,11 @@
+{
+    "model_cache_endpoint": {
+        "url": "http://graphdb:7200/repositories/model_cache"
+    },
+    "validation_endpoint": {
+        "url": "http://graphdb:7200/repositories/validation_results"
+    },
+    "data_endpoint": {
+        "url": "http://graphdb:7200/repositories/data"
+    }
+}
