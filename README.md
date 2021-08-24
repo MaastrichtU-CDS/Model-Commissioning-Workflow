@@ -6,7 +6,8 @@ This repository contains the execution environment for the FAIRcomml software pa
 - Docker CE (for Windows/macOS optionally)
 
 ## How to install?
-Please run the command `docker-compose up -d`. This will download and install all components needed (docker containers).
+1. Download this repository [here](https://github.com/MaastrichtU-CDS/Model-Commissioning-Workflow/archive/refs/heads/master.zip), or clone the repository using the command `git clone https://github.com/MaastrichtU-CDS/Model-Commissioning-Workflow.git`.
+2. Please run the command `docker-compose up -d`. This will download and install all components needed (docker containers).
 If needed, you can store your own CSV dataset in [./triplifier_data](./triplifier_data) folder. This data will be parsed and stored in the RDF store.
 
 ## How to use?
